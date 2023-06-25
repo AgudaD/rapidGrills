@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         'grotesk': ['Cabinet Grotesk', 'sans serif'],
       },
+      backgroundImage: {
+        'hotdog': 'url(./src/assets/hotdogImage.png)'
+      },
     },
   },
   plugins: [],
