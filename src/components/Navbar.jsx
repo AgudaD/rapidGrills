@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { Heart, List, ShoppingCart, X } from "phosphor-react";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className="relative flex items-center justify-between rounded-xl p-6 shadow-xl drop-shadow-md">
+    <div className="relative z-50 flex items-center justify-between rounded-xl p-6 shadow-xl drop-shadow-md cursor-pointer">
       {/* Burger Menu */}
       <div
-        className="absolute left-0 top-0 z-50 -ml-[20rem] h-screen w-[15rem] bg-white py-4 pl-6 transition-all duration-300 ease-linear"
+        className="absolute left-0 top-0  -ml-[20rem] h-screen w-[15rem] bg-white py-4 pl-6 transition-all duration-300 ease-linear"
         style={{
           marginLeft: showMenu && "0",
         }}
@@ -37,14 +38,16 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="items-center sm:hidden md:flex">
+      <div className="hidden items-center md:flex">
         <img src={logo} alt="" className="w-20" />
         <h1 className="text-3xl text-pink-700">foodpanda</h1>
       </div>
 
       <div className="flex items-center gap-8">
         <Heart size={32} color="#e91e63" />
-        <ShoppingCart size={32} color="#e91e63" />
+        <Link to={"/cart"}>
+          <ShoppingCart size={32} color="#e91e63" />
+        </Link>
       </div>
     </div>
   );

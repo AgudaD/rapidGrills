@@ -1,32 +1,74 @@
-import CartTop from '../components/CartTop'
-import rider from '../assets/rider.png'
+import CartTop from "../components/CartTop";
+import rider from "../assets/rider.png";
+import { Bookmark } from "phosphor-react";
+import { motion } from "framer-motion";
 
 const Cart = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75 }}
+    >
       <CartTop />
-      <div className='px-12 py-6'>
-        <div className='flex items-center gap-10 p-3 shadow-md drop-shadow-lg'>
-            <img src={rider} alt="" />
-            <div>
-                <p className='text-sm'>Estimated delivery</p>
-                <p className='text-xl font-semibold'>Now (30 min)</p>
-            </div>
+      <div className="px-12 py-6">
+        <div className="flex items-center gap-10 p-3 shadow-md drop-shadow-lg">
+          <img src={rider} alt="" />
+          <div>
+            <p className="text-sm">Estimated delivery</p>
+            <p className="text-xl font-semibold">Now (30 min)</p>
+          </div>
         </div>
 
-        <div className='flex justify-between items-center'>
-            <div className='flex items-center gap-4'>
-                <p className='bg-gray-400 p-2 text-lg'>1</p>
-                <div>
-                    <p className='text-pink-500 text-lg'>Exclusive Subway Deal</p>
-                    <p className='text-gray-500 text-sm'>Chicken Teriyaki</p>
-                </div>
+        <div className="mt-10 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <p className="bg-gray-400 px-4 py-2 text-lg">1</p>
+            <div>
+              <p className="text-lg text-pink-500">Exclusive Subway Deal</p>
+              <p className="text-sm text-gray-500">Chicken Teriyaki</p>
             </div>
-            <p className='text-gray-500 text-sm'>$50</p>
+          </div>
+          <p className="text-md text-gray-500">$50</p>
+        </div>
+
+        <div className="mt-32 space-y-4">
+          <div className="flex items-center justify-between">
+            <p className="text-2xl font-semibold">Subtotal</p>
+            <p className="text-md">$170</p>
+          </div>
+          <div className="flex items-center justify-between">
+            <p className="text-lg">Discout</p>
+            <p className="text-md rounded-full bg-[#e91e6250] px-1 text-pink-500">
+              -$20.32
+            </p>
+          </div>
+          <div className="flex items-center justify-between">
+            <p className="text-lg">Delivery</p>
+            <p className="text-md">$34</p>
+          </div>
+          <div className="flex items-center justify-between">
+            <p className="text-lg">VAT</p>
+            <p className="text-md">$21.46</p>
+          </div>
+        </div>
+
+        <div className="mb-16 mt-6 flex items-center gap-4">
+          <Bookmark size={32} color="#e91e63" />
+          <p className="text-lg font-semibold text-pink-500">Apply a voucher</p>
         </div>
       </div>
-    </div>
-  )
-}
+      <hr className="bg-gray-600" />
+      <div className="-mt-3 px-12 py-6 font-semibold">
+        <div className="mb-5 flex items-center justify-between">
+          <p>Total</p>
+          <p>$205.14</p>
+        </div>
+        <button className="w-full rounded-md bg-pink-500 px-6 py-2 text-white">
+          Place order
+        </button>
+      </div>
+    </motion.div>
+  );
+};
 
-export default Cart
+export default Cart;

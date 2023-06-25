@@ -3,11 +3,11 @@ import search from "../assets/Search.gif";
 const LocateRestaurant = () => {
   return (
     <div className="mt-8">
-      <div className="relative -z-10">
+      <div className="relative">
         <input
-          type="text"
+          type="search"
           placeholder="Search restaurant"
-          className="w-full rounded-lg px-12 py-1.5 shadow-xl drop-shadow-md"
+          className="w-full rounded-lg px-12 py-1.5 shadow-xl drop-shadow-md outline-none cursor-pointer"
         />
         <img src={search} alt="" className="absolute left-1.5 top-1.5 w-6" />
       </div>

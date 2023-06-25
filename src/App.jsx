@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Loading from "./components/Loading";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -14,53 +15,24 @@ const App = () => {
   }, []);
 
   return (
-    <div className="font-grotesk" >
-      {/* <AnimatePresence>
-        {isLoading ?
-          (
-            <motion.div
-              key={"loadingScreen"}
-              initial={{opacity: 0}} 
-              animate={{opacity: 1, ease: "easeOut"}} 
-              exit={{opacity: 0}} 
-              className="bg-pink-600 p-36"
-            >
-              <Loading />
-             
-            </motion.div>
-          ):
-          <motion.div
-              key={"cart"}
-              initial={{opacity: 0}} 
-              animate={{opacity: 1, ease: "easeOut"}} 
-              exit={{opacity: 0}} 
-            >
-              <Cart />
-            </motion.div>
-
-        }
-      </AnimatePresence> */}
-
+    <div className="font-grotesk">
       <AnimatePresence>
-      {isLoading ? (
-        <motion.div
-        key={"loadingScreen"}
-        initial={{opacity: 0}} 
-        animate={{opacity: 1, ease: "easeOut"}} 
-        exit={{opacity: 0}} 
-      >
-        <Loading />
-      </motion.div>
-        ):
-        <motion.div
-              key={"cart"}
-              initial={{opacity: 0}} 
-              animate={{opacity: 1, ease: "easeOut"}} 
-              exit={{opacity: 0}} 
-            >
-              <Cart />
-            </motion.div>
-      }
+        {isLoading ? (
+          <motion.div
+            key={"loadingScreen"}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, ease: "easeOut" }}
+            transition={{ duration: 0.75 }}
+            exit={{ opacity: 0 }}
+          >
+            <Loading />
+          </motion.div>
+        ) : (
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        )}
       </AnimatePresence>
     </div>
   );
