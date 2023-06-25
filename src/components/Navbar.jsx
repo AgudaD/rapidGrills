@@ -44,6 +44,7 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center gap-8">
+        
         <Heart size={32} color="#e91e63" />
         <Link to={"/cart"}>
           <ShoppingCart size={32} color="#e91e63" />
