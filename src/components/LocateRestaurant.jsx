@@ -1,9 +1,8 @@
 import search from "../assets/Search.gif";
-import atikah from '../assets/atikah.png'
-import fishnchips from '../assets/fishnchips.png'
-import foodbag from '../assets/foodbag.png'
-import groceries from '../assets/groceries.png'
-import martImages from '../assets/martImages.png'
+import atikah from '../assets/atikah.svg'
+import foodbag from '../assets/foodbag.svg'
+import groceries from '../assets/groceries.svg'
+import martImages from '../assets/martImages.svg'
 
 const LocateRestaurant = () => {
   return (
@@ -12,7 +11,7 @@ const LocateRestaurant = () => {
         <input
           type="search"
           placeholder="Search restaurant"
-          className="w-full rounded-lg px-12 py-1.5 shadow-xl drop-shadow-md outline-none cursor-pointer"
+          className="w-full rounded-lg px-12 py-1.5 shadow-xl drop-shadow-md outline-none"
         />
         <img src={search} alt="" className="absolute left-1.5 top-1.5 w-6" />
       </div>
@@ -34,19 +33,19 @@ const LocateRestaurant = () => {
         </div>
 
         <div className="relative rounded-md bg-pink-300 p-4">
-          <div className="mt-14">
+          <div className="mt-14 md:mt-24">
           <p className="text-base font-semibold md:text-2xl">Pick-Up</p>
           <p className="text-sm  md:text-lg">Everyday up to 25% off</p>
           </div> 
-          <img src={foodbag} alt="" className="absolute top-0 right-0 w-16" />
+          <img src={foodbag} alt="" className="absolute top-0 right-0 w-[5rem] md:w-[8rem]" />
         </div>
 
         <div className="relative rounded-md bg-blue-300 p-3">
-          <div className="mt-4">
+          <div className="mt-4 md:mt-16">
           <p className="text-base font-semibold md:text-2xl">Shops</p>
           <p className="text-sm  md:text-lg">Grocery and more</p>
           </div>
-          <img src={groceries} alt="" className="absolute top-0 right-0" />
+          <img src={groceries} alt="" className="absolute top-0 right-0  w-[3rem] md:w-[6rem]" />
         </div>
       </div>
     </div>

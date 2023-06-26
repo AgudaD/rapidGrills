@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Heart, List, ShoppingCart, X } from "phosphor-react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {

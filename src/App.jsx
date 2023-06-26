@@ -4,6 +4,7 @@ import Loading from "./components/Loading";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import { Routes, Route } from "react-router-dom";
+import SwiperComponent from "./components/SwiperComponent";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);

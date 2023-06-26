@@ -10,7 +10,8 @@ export default {
         'grotesk': ['Cabinet Grotesk', 'sans serif'],
       },
       backgroundImage: {
-        'hotdog': 'url(./src/assets/hotdogImage.png)'
+        'hotdog': 'url(./src/assets/hotdog.svg)',
+        'pizza': 'url(./src/assets/pizza.svg)',
       },
     },
   },
