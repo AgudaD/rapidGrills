@@ -6,6 +6,7 @@ import Cart from "./pages/Cart";
 import { Routes, Route } from "react-router-dom";
 import SwiperComponent from "./components/SwiperComponent";
 import Shops from "./pages/Shops";
+import API from "./components/API";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +19,8 @@ const App = () => {
 
   return (
     <div className="font-grotesk">
-      <AnimatePresence>
+      <API />
+      {/* <AnimatePresence>
         {isLoading ? (
           <motion.div
             key={"loadingScreen"}
@@ -36,7 +38,7 @@ const App = () => {
             <Route path="/shop" element={<Shops />} />
           </Routes>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };
