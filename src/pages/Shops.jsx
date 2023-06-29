@@ -1,38 +1,15 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { X } from "phosphor-react";
-import axios from "axios";
-import pizza from "../assets/pizza.svg";
+// import React, { useState } from "react";
+// import { Link } from "react-router-dom";
+// import { X } from "phosphor-react";
+// import axios from "axios";
+// import pizza from "../assets/pizza.svg";
+import API from "../components/API";
 
 const Shops = () => {
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [titles, setTitles] = useState("");
-
-  
-  const getOrder = async () => {
-    const url = "https://jsonplaceholder.typicode.com/posts";
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "dfce745ee1mshbd7ab296d75bc4ep129daejsnf3f9823f056f",
-        "X-RapidAPI-Host": "moviesdatabase.p.rapidapi.com",
-      },
-    };
-
-    try {
-      const response = await fetch(url, options);
-      const results = await response.json();
-      console.log(results);
-
-      setTitles(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
   return (
     <div>
-      <div className="flex items-center gap-4 rounded-sm p-6 shadow-lg drop-shadow-2xl">
+      <API />
+      {/* <div className="flex items-center gap-4 rounded-sm p-6 shadow-lg drop-shadow-2xl">
         <Link to={"/"}>
           <X size={32} color="#e91e63" className="" />
         </Link>
@@ -59,7 +36,7 @@ const Shops = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

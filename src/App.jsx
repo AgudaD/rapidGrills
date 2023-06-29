@@ -19,8 +19,8 @@ const App = () => {
 
   return (
     <div className="font-grotesk">
-      <API />
-      {/* <AnimatePresence>
+      {/* <API /> */}
+      <AnimatePresence>
         {isLoading ? (
           <motion.div
             key={"loadingScreen"}
@@ -38,7 +38,7 @@ const App = () => {
             <Route path="/shop" element={<Shops />} />
           </Routes>
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
     </div>
   );
 };
