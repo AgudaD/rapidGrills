@@ -4,9 +4,7 @@ import Loading from "./components/Loading";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import { Routes, Route } from "react-router-dom";
-import SwiperComponent from "./components/SwiperComponent";
 import Shops from "./pages/Shops";
-import API from "./components/API";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +17,6 @@ const App = () => {
 
   return (
     <div className="font-grotesk">
-      {/* <API /> */}
       <AnimatePresence>
         {isLoading ? (
           <motion.div

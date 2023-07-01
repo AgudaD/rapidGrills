@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Heart, ShoppingCart, X } from "phosphor-react";
+import logo from '../assets/logo.svg'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -20,7 +21,7 @@ const Navbar = () => {
     <div>
       {/* Burger menu */}
       <div
-        className="flex justify-between items-center gap-3 rounded-xl p-6 shadow-xl drop-shadow-md cursor-pointer lg:hidden"
+        className="flex cursor-pointer items-center justify-between gap-3 rounded-xl p-6 shadow-xl drop-shadow-md lg:hidden"
         onClick={() => setOpen(!open)}
         style={{
           opacity: open && "0",
@@ -101,7 +102,10 @@ const Navbar = () => {
       </div>
 
       {/* Web nav */}
-      <div></div>
+      <div className="hidden lg:flex justify-center items-center gap-2 rounded-xl p-6 shadow-xl drop-shadow-md">
+        <img src={logo} alt="" />
+        <h1 className="text-3xl tracking-wide">foodpanda</h1>
+      </div>
     </div>
   );
 };
