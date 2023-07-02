@@ -68,7 +68,7 @@ const Navbar = () => {
         >
           <X
             size={32}
-            color="#e91e64"
+            color="#e91e65"
             className="absolute "
             onClick={() => setShowMenu(false)}
           />
