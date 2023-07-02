@@ -25,9 +25,9 @@ const meals = [
   },
   {
     id: 4,
-    name: "Chicken Bucket",
+    name: "Chicken Wings",
     price: 10000,
-    image: "https://www.pngkit.com/png/full/14-149399_fried-chicken-bucket-of-chicken-png.png",
+    image: "https://pngimg.com/d/kfc_food_PNG40.png",
   },
   {
     id: 5,
