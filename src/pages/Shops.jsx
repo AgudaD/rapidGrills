@@ -2,26 +2,29 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { MinusCircle, PlusCircle, X } from "phosphor-react";
 import axios from "axios";
-import beefBurger from '../assets/beefBurger.jpg'
+import beefBurger from "../assets/beefBurger.jpg";
 
 const meals = [
   {
     id: 1,
     name: "Burger",
     price: 8.61,
-    image: "https://www.transparentpng.com/thumb/burger/hot-burger-king-hd-png-9dzyCE.png",
+    image:
+      "https://www.transparentpng.com/thumb/burger/hot-burger-king-hd-png-9dzyCE.png",
   },
   {
     id: 2,
     name: "Tacos",
     price: 3.49,
-    image: "https://deltaco.com/files/menu/item/DEL-276_Promo-5-Website-Images_Hero_The-Del-Taco_860x480.png?v=4.027",
+    image:
+      "https://deltaco.com/files/menu/item/DEL-276_Promo-5-Website-Images_Hero_The-Del-Taco_860x480.png?v=4.027",
   },
   {
     id: 3,
     name: "Pizza",
     price: 17.81,
-    image: "https://d257c1zjbj9yqq.cloudfront.net/general-uploads/Menu-Images/_1200x630_crop_center-center_82_none/Bronco.png?mtime=1617398245",
+    image:
+      "https://d257c1zjbj9yqq.cloudfront.net/general-uploads/Menu-Images/_1200x630_crop_center-center_82_none/Bronco.png?mtime=1617398245",
   },
   {
     id: 4,
@@ -39,35 +42,42 @@ const meals = [
     id: 6,
     name: "Shawarma",
     price: 10,
-    image: "https://doner-chi.ca/wp-content/uploads/2022/04/Turkish-Shawarma.png",
+    image:
+      "https://doner-chi.ca/wp-content/uploads/2022/04/Turkish-Shawarma.png",
   },
   {
     id: 7,
     name: "Hotdog",
     price: 3.95,
-    image: "https://assets.website-files.com/603372273fbc1306f1583eab/60364be6e775f2349bb6dbad_cheerleaders-hotdogs-got-the-flava.png",
+    image:
+      "https://assets.website-files.com/603372273fbc1306f1583eab/60364be6e775f2349bb6dbad_cheerleaders-hotdogs-got-the-flava.png",
   },
   {
     id: 8,
     name: "Salad",
     price: 4.25,
-    image: "https://images.ctfassets.net/l5fkpck1mwg3/7DzLQK4fxXHEaMRLjS6Taf/c9ad552a443f0af7888222b3738cc417/Chicken_Caesar_Salad.png",
+    image:
+      "https://images.ctfassets.net/l5fkpck1mwg3/7DzLQK4fxXHEaMRLjS6Taf/c9ad552a443f0af7888222b3738cc417/Chicken_Caesar_Salad.png",
   },
   {
     id: 9,
     name: "Milkshake",
     price: 7.29,
-    image: "https://zalimfoods.com/wp-content/uploads/2023/03/New-Project-45.png",
+    image:
+      "https://zalimfoods.com/wp-content/uploads/2023/03/New-Project-45.png",
   },
   {
     id: 10,
     name: "Fries",
     price: 5,
-    image: "https://images.ctfassets.net/l5fkpck1mwg3/5Ih3U85mGJXFzfQrfe9yP4/334041e07865621f88f687c6a5291463/Appetizers_French_Fries.png",
+    image:
+      "https://images.ctfassets.net/l5fkpck1mwg3/5Ih3U85mGJXFzfQrfe9yP4/334041e07865621f88f687c6a5291463/Appetizers_French_Fries.png",
   },
 ];
 
 const Shops = () => {
+  const [count, setCount] = useState(0);
+
   return (
     <div>
       <div className="flex items-center gap-4 rounded-sm p-6 shadow-lg drop-shadow-2xl">
@@ -82,11 +92,17 @@ const Shops = () => {
 
       {meals.map((meal) => (
         <div key={meal.id} className="mt-5 px-6">
-          <div className="shadow-md drop-shadow-md rounded-md mb-10 flex items-center gap-5 p-4">
-            <img src={meal.image} alt="" className="w-[10rem]" />
-            <div>
-              <p>{meal.name}</p>
-              <p>${meal.price}</p>
+          <div className="mb-10 flex justify-between items-center rounded-md p-4 shadow-md drop-shadow-md">
+            <div className="flex items-center gap-5">
+              <img src={meal.image} alt="" className="w-[10rem]" />
+              <div>
+                <p>{meal.name}</p>
+                <p>${meal.price}</p>
+              </div>
+            </div>
+
+            <div className="flex max-w-[7rem] items-center justify-between gap-4">
+              <button className="border border-[#e91e63] px-8 py-1.5 rounded-full hover:bg-[#e91e6248]">Add</button>
             </div>
           </div>
         </div>
@@ -97,30 +113,29 @@ const Shops = () => {
 
 export default Shops;
 
+// const [data, setData] = useState([]);
+// const [count, setCount] = useState(0);
+// const [image, setImage] = useState();
 
- // const [data, setData] = useState([]);
-  // const [count, setCount] = useState(0);
-  // const [image, setImage] = useState();
+// useEffect(() => {
+//   getApiData();
+// }, []);
 
-  // useEffect(() => {
-  //   getApiData();
-  // }, []);
+// const getApiData = async () => {
+//   const options = {
+//     method: "GET",
+//     url: "https://api.spoonacular.com/food/menuItems/random?apiKey=f530be95bab249d4b8a4dc15ef832fb7",
+//   };
 
-  // const getApiData = async () => {
-  //   const options = {
-  //     method: "GET",
-  //     url: "https://api.spoonacular.com/food/menuItems/random?apiKey=f530be95bab249d4b8a4dc15ef832fb7",
-  //   };
-
-  //   try {
-  //     const response = await axios.request(options);
-  //     console.log(response.data);
-  //     setData(response.data.title);
-  //     setImage(response.data.images[0])
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
+//   try {
+//     const response = await axios.request(options);
+//     console.log(response.data);
+//     setData(response.data.title);
+//     setImage(response.data.images[0])
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
 
 {
   /* {data.map((pizza) => (

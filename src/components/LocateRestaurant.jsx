@@ -18,7 +18,7 @@ const LocateRestaurant = () => {
       </div>
 
       <div className="mt-6 grid grid-cols-2 gap-3">
-        <div className="col-span-2 flex items-center justify-between rounded-md bg-pink-600 px-3 py-6 text-white">
+        <div className="col-span-1 flex items-center justify-between rounded-md bg-pink-600 px-3 py-6 text-white">
           <div className="mt-12">
             <p className="text-base font-semibold md:text-2xl">Food Delivery</p>
             <p className="text-sm md:text-lg">order food you love</p>
@@ -45,8 +45,8 @@ const LocateRestaurant = () => {
           />
         </div>
 
-        <div className="relative rounded-md bg-blue-300 p-3">
-          <Link to={"/shop"}>
+        <Link to={"/shop"}>
+          <div className="relative rounded-md bg-blue-300 p-3">
             <div className="mt-4 md:mt-16">
               <p className="text-base font-semibold md:text-2xl">Shops</p>
               <p className="text-sm  md:text-lg">Grocery and more</p>
@@ -56,8 +56,8 @@ const LocateRestaurant = () => {
               alt=""
               className="absolute right-0 top-0  w-[3rem] md:w-[6rem]"
             />
-          </Link>
-        </div>
+          </div>
+        </Link>
       </div>
     </div>
   );

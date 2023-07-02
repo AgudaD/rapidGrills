@@ -15,16 +15,11 @@ const Restaurants = () => {
             width: 320, 
             slidesPerView: 1,
           },
-          640:{
-            width: 640,
-            slidesPerView: 2.2,
-            spaceBetween: 50,
-          },
           720:{
             width: 720,
             slidesPerView: 3,
-            spaceBetween: 50,
-          }
+            spaceBetween: 30,
+          },
         }}
         scrollbar={{draggable: true}}
         onslideChange={() => console.log(`slide change`)}
