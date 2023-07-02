@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-// const URL = "https://jsonplaceholder.typicode.com/posts/2"
 
 const API = () => {
   const [data, setData] = useState([]);

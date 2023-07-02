@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import { Routes, Route } from "react-router-dom";
 import Shops from "./pages/Shops";
+import ApiCall from "./components/ApiCall";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
