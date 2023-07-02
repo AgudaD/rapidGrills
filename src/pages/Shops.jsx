@@ -33,7 +33,7 @@ const meals = [
     id: 5,
     name: "Sandwich",
     price: 3500,
-    image: "https://fruits2go.ng/wp-content/uploads/2022/06/club-sandwitch.png",
+    image: "https://www.menudrive.com/wp-content/uploads/2021/02/Sandwich.png",
   },
   {
     id: 6,
@@ -45,25 +45,25 @@ const meals = [
     id: 7,
     name: "Hotdog",
     price: 2500,
-    image: "",
+    image: "https://assets.website-files.com/603372273fbc1306f1583eab/60364be6e775f2349bb6dbad_cheerleaders-hotdogs-got-the-flava.png",
   },
   {
-    id: 7,
+    id: 8,
     name: "Salad",
     price: 2500,
-    image: "",
+    image: "https://images.ctfassets.net/l5fkpck1mwg3/7DzLQK4fxXHEaMRLjS6Taf/c9ad552a443f0af7888222b3738cc417/Chicken_Caesar_Salad.png",
   },
   {
-    id: 7,
-    name: "Hotdog",
+    id: 9,
+    name: "Milkshake",
     price: 2500,
-    image: "",
+    image: "https://zalimfoods.com/wp-content/uploads/2023/03/New-Project-45.png",
   },
   {
-    id: 7,
-    name: "Hotdog",
+    id: 10,
+    name: "Fries",
     price: 2500,
-    image: "",
+    image: "https://images.ctfassets.net/l5fkpck1mwg3/5Ih3U85mGJXFzfQrfe9yP4/334041e07865621f88f687c6a5291463/Appetizers_French_Fries.png",
   },
 ];
 
@@ -82,7 +82,7 @@ const Shops = () => {
 
       {meals.map((meal) => (
         <div key={meal.id} className="mt-5 px-6">
-          <div className="shadow-md drop-shadow-md rounded-md mb-10 flex items-center gap-5">
+          <div className="shadow-md drop-shadow-md rounded-md mb-10 flex items-center gap-5 p-4">
             <img src={meal.image} alt="" className="w-[10rem]" />
             <div>
               <p>{meal.name}</p>
