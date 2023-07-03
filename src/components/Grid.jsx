@@ -1,54 +1,89 @@
 import { Link } from "react-router-dom";
 
-import atikah from "../assets/atikah.svg";
-import foodbag from "../assets/foodbag.svg";
-import groceries from "../assets/groceries.svg";
-import martImages from "../assets/martImages.svg";
+
+const meals = [
+  {
+    id: 1,
+    name: "Burger",
+    price: 8.61,
+    image:
+      "https://www.transparentpng.com/thumb/burger/hot-burger-king-hd-png-9dzyCE.png",
+  },
+  {
+    id: 2,
+    name: "Tacos",
+    price: 3.49,
+    image:
+      "https://deltaco.com/files/menu/item/DEL-276_Promo-5-Website-Images_Hero_The-Del-Taco_860x480.png?v=4.027",
+  },
+  {
+    id: 3,
+    name: "Pizza",
+    price: 17.81,
+    image:
+      "https://d257c1zjbj9yqq.cloudfront.net/general-uploads/Menu-Images/_1200x630_crop_center-center_82_none/Bronco.png?mtime=1617398245",
+  },
+  {
+    id: 4,
+    name: "Chicken Wings",
+    price: 20,
+    image: "https://pngimg.com/d/kfc_food_PNG40.png",
+  },
+  {
+    id: 5,
+    name: "Sandwich",
+    price: 7.59,
+    image: "https://www.menudrive.com/wp-content/uploads/2021/02/Sandwich.png",
+  },
+  {
+    id: 6,
+    name: "Shawarma",
+    price: 10,
+    image:
+      "https://doner-chi.ca/wp-content/uploads/2022/04/Turkish-Shawarma.png",
+  },
+  {
+    id: 7,
+    name: "Hotdog",
+    price: 3.95,
+    image:
+      "https://assets.website-files.com/603372273fbc1306f1583eab/60364be6e775f2349bb6dbad_cheerleaders-hotdogs-got-the-flava.png",
+  },
+  {
+    id: 8,
+    name: "Salad",
+    price: 4.25,
+    image:
+      "https://images.ctfassets.net/l5fkpck1mwg3/7DzLQK4fxXHEaMRLjS6Taf/c9ad552a443f0af7888222b3738cc417/Chicken_Caesar_Salad.png",
+  },
+  {
+    id: 9,
+    name: "Milkshake",
+    price: 7.29,
+    image:
+      "https://zalimfoods.com/wp-content/uploads/2023/03/New-Project-45.png",
+  },
+  {
+    id: 10,
+    name: "Fries",
+    price: 5,
+    image:
+      "https://images.ctfassets.net/l5fkpck1mwg3/5Ih3U85mGJXFzfQrfe9yP4/334041e07865621f88f687c6a5291463/Appetizers_French_Fries.png",
+  },
+];
 
 const Grid = () => {
   return (
-    <div className="grid grid-flow-row-dense grid-cols-1 gap-x-2 gap-y-3 px-6 py-4 md:grid-cols-2">
-      <div className="flex items-center justify-between rounded-md bg-pink-600 px-3 py-6 text-white md:col-span-2">
-        <div className="mt-12">
-          <p className="text-base font-semibold md:text-2xl">Food Delivery</p>
-          <p className="text-sm md:text-lg">order food you love</p>
-        </div>
-        <img src={atikah} alt="" className="w-32 md:w-48" />
-      </div>
-
-      <div className="flex flex-col justify-around rounded-md bg-[#FCD077] p-3 md:row-span-2">
-        <img src={martImages} alt="" />
-        <div>
-          <p className="text-base font-semibold md:text-2xl">Pandamart</p>
-          <p className="w-24 text-sm md:text-lg">Everyday up to 20% off</p>
-        </div>
-      </div>
-
-      <div className="relative rounded-md bg-pink-300 p-4">
-        <div className="mt-14 md:mt-24">
-          <p className="text-base font-semibold md:text-2xl">Pick-Up</p>
-          <p className="text-sm  md:text-lg">Everyday up to 25% off</p>
-        </div>
-        <img
-          src={foodbag}
-          alt=""
-          className="absolute right-0 top-0 w-[5rem] md:w-[8rem]"
-        />
-      </div>
-
-      <Link to={"/shop"} className="relative rounded-md bg-blue-300 p-3">
-        <div>
-          <div className="mt-4 md:mt-16">
-            <p className="text-base font-semibold md:text-2xl">Shops</p>
-            <p className="text-sm  md:text-lg">Grocery and more</p>
+    <div className="grid grid-cols-3 gap-3 grid-flow-row-dense">
+      {meals.map((meal) => {
+        return(
+          <div key={meal.id} className="shadow-lg drop-shadow-md rounded-md">
+            <div className="bg-red-300">
+              <p>hello</p>
+            </div>
           </div>
-          <img
-            src={groceries}
-            alt=""
-            className="absolute right-0 top-0  w-[3rem] md:w-[6rem]"
-          />
-        </div>
-      </Link>
+        )
+      })}
     </div>
   );
 };
