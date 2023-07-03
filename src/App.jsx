@@ -6,6 +6,7 @@ import Cart from "./pages/Cart";
 import { Routes, Route } from "react-router-dom";
 import Shops from "./pages/Shops";
 import ApiCall from "./components/ApiCall";
+import Grid from "./components/Grid"
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);

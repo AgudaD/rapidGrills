@@ -91,8 +91,8 @@ const Shops = () => {
       </div>
 
       {meals.map((meal) => (
-        <div key={meal.id} className="mt-5 px-6">
-          <div className="mb-10 flex justify-between items-center rounded-md p-4 shadow-md drop-shadow-md">
+        <div key={meal.id} className="mt-10 px-6">
+          <div className="mb-10 flex items-center justify-between rounded-md p-4 shadow-md drop-shadow-md">
             <div className="flex items-center gap-5">
               <img src={meal.image} alt="" className="w-[10rem]" />
               <div>
@@ -102,11 +102,18 @@ const Shops = () => {
             </div>
 
             <div className="flex max-w-[7rem] items-center justify-between gap-4">
-              <button className="border border-[#e91e63] px-8 py-1.5 rounded-full hover:bg-[#e91e6248]">Add</button>
+              <button className="rounded-full border border-[#e91e63] px-8 py-1.5 hover:bg-[#e91e6248]">
+                Add
+              </button>
             </div>
           </div>
         </div>
       ))}
+      <div className="flex items-center justify-center mb-12">
+        <button className="rounded-full bg-[#e91e63] px-16 py-1.5 hover:bg-[#e91e62cb] text-white">
+          Proceed
+        </button>
+      </div>
     </div>
   );
 };

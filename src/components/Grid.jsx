@@ -1,23 +1,13 @@
-import search from "../assets/Search.gif";
+import { Link } from "react-router-dom";
+
 import atikah from "../assets/atikah.svg";
 import foodbag from "../assets/foodbag.svg";
 import groceries from "../assets/groceries.svg";
 import martImages from "../assets/martImages.svg";
-import { Link } from "react-router-dom";
 
-const LocateRestaurant = () => {
+const Grid = () => {
   return (
-    <div className="mt-8">
-      <div className="relative">
-        <input
-          type="search"
-          placeholder="Search restaurant"
-          className="w-full rounded-lg px-12 py-1.5 shadow-xl outline-none drop-shadow-md"
-        />
-        <img src={search} alt="" className="absolute left-1.5 top-1.5 w-6" />
-      </div>
-
-      <div className="mt-6 grid grid-flow-row-dense grid-cols-1 gap-x-2 gap-y-3 md:grid-cols-2">
+    <div className="grid grid-flow-row-dense grid-cols-1 gap-x-2 gap-y-3 px-6 py-4 md:grid-cols-2">
       <div className="flex items-center justify-between rounded-md bg-pink-600 px-3 py-6 text-white md:col-span-2">
         <div className="mt-12">
           <p className="text-base font-semibold md:text-2xl">Food Delivery</p>
@@ -60,8 +50,7 @@ const LocateRestaurant = () => {
         </div>
       </Link>
     </div>
-    </div>
   );
 };
 
-export default LocateRestaurant;
+export default Grid;
