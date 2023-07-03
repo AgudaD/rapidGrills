@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { MinusCircle, PlusCircle, X } from "phosphor-react";
+import { ArrowLeft, MinusCircle, PlusCircle } from "phosphor-react";
 
 const meals = [
   {
@@ -80,7 +80,7 @@ const Shops = () => {
     <div>
       <div className="flex items-center gap-4 rounded-sm p-6 shadow-lg drop-shadow-2xl">
         <Link to={"/"}>
-          <X size={32} color="#e91e63" className="" />
+          <ArrowLeft size={32} color="#e91e63" className="" />
         </Link>
         <div>
           <p className="text-lg">Shop</p>
@@ -88,30 +88,33 @@ const Shops = () => {
         </div>
       </div>
 
-      {meals.map((meal) => (
-        <div key={meal.id} className="mt-5 px-6">
-          <div className="flex items-center justify-between rounded-md p-4 shadow-md drop-shadow-md">
-            <div className="flex items-center gap-5">
-              <img src={meal.image} alt="" className="w-[5rem]" />
-              <div>
-                <p>{meal.name}</p>
-                <p>${meal.price}</p>
+      <div className="grid grid-cols-1 gap-4 grid-flow-row-dense px-6 py-4 md:grid-cols-2 lg:grid-cols-3">
+        {meals.map((meal) => {
+          return(
+            <div key={meal.id} className="">
+              <div className="shadow-lg drop-shadow-md rounded-md flex justify-between items-center gap-3 p-3">
+                <div className="flex items-center gap-3">
+                  <img src={meal.image} alt="" className="max-w-[5rem] h-[3.5rem] md:w-[7rem] md:h-[5rem] lg:max-w-[5rem] lg:h-[3.5rem]" />
+                  <div>
+                    <p className="md:text-xl">{meal.name}</p>
+                    <p className="md:text-xl">${meal.price}</p>
+                  </div>
+                </div>
+                <div className="flex max-w-[7rem] items-center justify-between gap-4">
+                <button className="rounded-full border border-[#e91e63] px-8 py-1.5 hover:bg-[#e91e6248] md:text-sm md:px-6">
+                  Add
+                </button>
+              </div>
               </div>
             </div>
-
-            <div className="flex max-w-[7rem] items-center justify-between gap-4">
-              <button className="rounded-full border border-[#e91e63] px-8 py-1.5 hover:bg-[#e91e6248]">
-                Add
-              </button>
-            </div>
-          </div>
-        </div>
-      ))}
-      <div className="flex items-center justify-center mb-10">
-        <button className="rounded-full border bg-[#e91e63] px-8 py-1.5 hover:bg-[#e91e62bb]">
-          Proceed
-        </button>
+          )
+        })}
       </div>
+      <div className="flex items-center justify-center my-16">
+          <button className="rounded-full border bg-[#e91e63] px-8 py-1.5 text-white md:text-xl hover:bg-[#e91e62bb]">
+            Proceed
+          </button>
+        </div>
     </div>
   );
 };
