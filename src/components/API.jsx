@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import config from "../config";
 
 
 const API = () => {
@@ -9,7 +10,7 @@ const API = () => {
 
   const getPopular = async () => {
     const api = await fetch(
-      `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}`
+      `https://api.spoonacular.com/recipes/random?apiKey=${config.apiKey}`
     );
 
     const data = await api.json();
