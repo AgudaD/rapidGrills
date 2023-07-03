@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Shops from "./pages/Shops";
 import ApiCall from "./components/ApiCall";
 import Grid from "./components/Grid"
+import API from "./components/API";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +20,8 @@ const App = () => {
 
   return (
     <div className="font-grotesk">
-      <AnimatePresence>
+      <API />
+      {/* <AnimatePresence>
         {isLoading ? (
           <motion.div
             key={"loadingScreen"}
@@ -37,7 +39,7 @@ const App = () => {
             <Route path="/shop" element={<Shops />} />
           </Routes>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };
