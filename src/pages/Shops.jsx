@@ -71,6 +71,126 @@ const meals = [
     image:
       "https://images.ctfassets.net/l5fkpck1mwg3/5Ih3U85mGJXFzfQrfe9yP4/334041e07865621f88f687c6a5291463/Appetizers_French_Fries.png",
   },
+  {
+    id: 11,
+    name: "Pepsi",
+    price: 4.20,
+    image: "",
+  },
+  {
+    id: 12,
+    name: "Sprite",
+    price: 4,
+    image: "",
+  },
+  {
+    id: 13,
+    name: "Fanta",
+    price: 4.12,
+    image: "",
+  },
+  {
+    id: 14,
+    name: "Water",
+    price: 2,
+    image: "",
+  },
+  {
+    id: 15,
+    name: "Mountain Dew",
+    price: 3.30,
+    image: "",
+  },
+  {
+    id: 16,
+    name: "Coke",
+    price: 4.34,
+    image: "",
+  },
+  {
+    id: 17,
+    name: "Spaghetti and Meatballs",
+    price: 25,
+    image: "",
+  },
+  {
+    id: 18,
+    name: "Apple Pie",
+    price: 4,
+    image: "",
+  },
+  {
+    id: 19,
+    name: "Peach Cobbler",
+    price: 5.23,
+    image: "",
+  },
+  {
+    id: 20,
+    name: "Cheesecake",
+    price: 13.01,
+    image: "",
+  },
+  {
+    id: 21,
+    name: "Salmon",
+    price: 30,
+    image: "",
+  },
+  {
+    id: 22,
+    name: "Chocolate Cake",
+    price: 17,
+    image: "",
+  },
+  {
+    id: 23,
+    name: "Vanilla Cake",
+    price: 15.32,
+    image: "",
+  },
+  {
+    id: 24,
+    name: "Red Velvet Cake",
+    price: 18.50,
+    image: "",
+  },
+  {
+    id: 25,
+    name: "Beer",
+    price: 5,
+    image: "",
+  },
+  {
+    id: 26,
+    name: "Chapman",
+    price: 23,
+    image: "",
+  },
+  {
+    id: 27,
+    name: "Donuts",
+    price: 7.21,
+    image: "",
+  },
+  {
+    id: 28,
+    name: "Pretzel",
+    price: 3.15,
+    image: "",
+  },
+  {
+    id: 29,
+    name: "Sausage Rolls",
+    price: 4.10,
+    image: "",
+  },
+  {
+    id: 30,
+    name: "Breadsticks",
+    price: 2,
+    image: "",
+  },
 ];
 
 const Shops = () => {
