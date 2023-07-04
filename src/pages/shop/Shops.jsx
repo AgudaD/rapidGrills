@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, MinusCircle, PlusCircle } from "phosphor-react";
+import { meals } from "../../mockData";
+import Meals from "./Meals";
 
-const Shops = ({ meals }) => {
+
+const Shops = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -20,25 +23,8 @@ const Shops = ({ meals }) => {
       <div className="grid grid-flow-row-dense grid-cols-1 gap-4 px-6 py-4 mt-16 md:grid-cols-2 lg:grid-cols-3">
         {meals.map((meal) => {
           return (
-            <div key={meal.id} className="">
-              <div className="flex items-center justify-between gap-3 rounded-md p-3 shadow-lg drop-shadow-md">
-                <div className="flex items-center gap-3">
-                  <img
-                    src={meal.image}
-                    alt=""
-                    className="h-[3.5rem] max-w-[5rem] md:h-[5rem] md:w-[7rem] lg:h-[4rem] lg:max-w-[5rem]"
-                  />
-                  <div>
-                    <p className="md:text-xl">{meal.name}</p>
-                    <p className="md:text-xl">${meal.price}</p>
-                  </div>
-                </div>
-                <div className="flex max-w-[7rem] items-center justify-between gap-4">
-                  <button className="rounded-full border border-[#e91e63] px-8 py-1.5 hover:bg-[#e91e6248] md:px-6 md:text-sm">
-                    Add
-                  </button>
-                </div>
-              </div>
+            <div key={meal.id}>
+              <Meals data={meal} />
             </div>
           );
         })}
