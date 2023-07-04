@@ -6,6 +6,7 @@ import Cart from "./pages/Cart";
 import { Routes, Route } from "react-router-dom";
 import Shops from "./pages/Shops";
 import { meals } from "./mockData";
+import Tests from "./components/Tests";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +19,8 @@ const App = () => {
 
   return (
     <div className="font-grotesk">
-      <AnimatePresence>
+      <Tests meals={meals} />
+      {/* <AnimatePresence>
         {isLoading ? (
           <motion.div
             key={"loadingScreen"}
@@ -36,7 +38,7 @@ const App = () => {
             <Route path="/shop" element={<Shops meals={meals} />} />
           </Routes>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };
