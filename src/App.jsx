@@ -1,10 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Loading from "./components/Loading";
-import Home from "./pages/Home";
-import Cart from "./pages/Cart";
+import Home from "./pages/home/Home";
+import Cart from "./pages/cart/Cart";
 import { Routes, Route } from "react-router-dom";
-import Shops from "./pages/Shops";
+import Shops from "./pages/shop/Shops";
 import { meals } from "./mockData";
 import Tests from "./components/Tests";
 
@@ -19,8 +19,8 @@ const App = () => {
 
   return (
     <div className="font-grotesk">
-      <Tests meals={meals} />
-      {/* <AnimatePresence>
+      {/* <Tests meals={meals} /> */}
+      <AnimatePresence>
         {isLoading ? (
           <motion.div
             key={"loadingScreen"}
@@ -38,7 +38,7 @@ const App = () => {
             <Route path="/shop" element={<Shops meals={meals} />} />
           </Routes>
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
     </div>
   );
 };

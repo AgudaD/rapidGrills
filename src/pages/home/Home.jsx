@@ -1,8 +1,8 @@
 import React from "react";
 // import Navbar from "../components/Navbar";
-import Navbar from "../components/NavMenu";
-import LocateRestaurant from "../components/LocateRestaurant";
-import Restaurants from "../components/Restaurants";
+import Navbar from "../../components/NavMenu";
+import LocateRestaurant from "../../components/LocateRestaurant";
+import Restaurants from "../../components/Restaurants";
 import { motion } from "framer-motion";
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.75 }}
       className="relative z-50"
-     >
+    >
       {/* <Navbar /> */}
       <Navbar />
 

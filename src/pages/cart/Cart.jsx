@@ -1,5 +1,5 @@
-import CartTop from "../components/CartTop";
-import rider from "../assets/rider.svg";
+import CartTop from "../../components/CartTop";
+import rider from "../../assets/rider.svg";
 import { Bookmark } from "phosphor-react";
 import { motion } from "framer-motion";
 
@@ -52,9 +52,11 @@ const Cart = () => {
           </div>
         </div>
 
-        <div className="mb-16 mt-6 flex items-center gap-4 cursor-pointer">
+        <div className="mb-16 mt-6 flex cursor-pointer items-center gap-4">
           <Bookmark size={32} color="#e91e63" />
-          <p className="text-lg font-semibold text-[#D60665]  hover:text-[#e91e62de]">Apply a voucher</p>
+          <p className="text-lg font-semibold text-[#D60665]  hover:text-[#e91e62de]">
+            Apply a voucher
+          </p>
         </div>
       </div>
       <hr className="bg-gray-600" />
