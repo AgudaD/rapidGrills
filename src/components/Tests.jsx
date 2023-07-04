@@ -1,15 +1,15 @@
-import { ArrowLeft, MinusCircle, PlusCircle } from "phosphor-react";
 import { useState } from "react";
-
+import Counter from "./Counter";
+import { meals } from "../mockData";
 
 const Tests = ({ meals }) => {
     const [count, setCount] = useState(0);
 
     const Decrement = () => {
-            setCount(count - 1)
+            setCount(count === 0 ? 2 : (prev) => prev - 1)
     }
     const Increment = () => {
-            setCount(count + 1)
+            setCount(count === 2 ? 0 : (prev) => prev + 1)
     }
 
   return (
@@ -35,10 +35,8 @@ const Tests = ({ meals }) => {
                     Add
                   </button>
                 </div>
-                <div className="flex justify-between items-center w-[5rem]">
-                    <MinusCircle onClick={Decrement} />
-                    <span>{count}</span>
-                    <PlusCircle onClick={Increment} />
+                <div>
+                    <Counter meals={meals} />
                 </div>
               </div>
             </div>
