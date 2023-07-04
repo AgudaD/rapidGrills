@@ -35,7 +35,7 @@ const Tests = ({ meals }) => {
                     Add
                   </button>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center w-[5rem]">
                     <MinusCircle onClick={Decrement} />
                     <span>{count}</span>
                     <PlusCircle onClick={Increment} />
