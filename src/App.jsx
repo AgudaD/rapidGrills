@@ -4,7 +4,8 @@ import Loading from "./components/Loading";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import { Routes, Route } from "react-router-dom";
-import Shops from "./pages/Shops";;
+import Shops from "./pages/Shops";
+import { meals } from "./mockData";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,7 +33,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/shop" element={<Shops />} />
+            <Route path="/shop" element={<Shops meals={meals} />} />
           </Routes>
         )}
       </AnimatePresence>
