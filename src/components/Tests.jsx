@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Counter from "./Counter";
 import { meals } from "../mockData";
 
 const Tests = ({ meals }) => {
