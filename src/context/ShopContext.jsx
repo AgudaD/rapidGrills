@@ -3,9 +3,10 @@ import { meals } from "../mockData";
 
 export const ShopContext = createContext(null);
 
+
 const getDefaultCart = () => {
   let cart = {};
-  for (let i = 1; i < meals.length; i++) {
+  for (let i = 1; i < meals.length + 1; i++) {
     cart[i] = 0;
   }
   return cart;

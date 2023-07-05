@@ -23,7 +23,7 @@ const Cart = () => {
           }
         })}
       </div>
-      <hr className="bg-gray-600" />
+      {/* <hr className="bg-gray-600" />
       <div className="-mt-3 px-12 py-6 font-semibold">
         <div className="mb-5 flex items-center justify-between">
           <p>Total</p>
@@ -32,7 +32,21 @@ const Cart = () => {
         <button className="w-full rounded-md bg-[#D60665] px-6 py-2 text-white hover:bg-[#e91e62de]">
           Place order
         </button>
-      </div>
+      </div> */}
+      {totalAmount > 0 ? 
+       <div>
+         <hr className="bg-gray-600" />
+         <div className="-mt-3 px-12 py-6 font-semibold">
+           <div className="mb-5 flex items-center justify-between">
+             <p>Total</p>
+             <p>${totalAmount}</p>
+           </div>
+           <button className="w-full rounded-md bg-[#D60665] px-6 py-2 text-white hover:bg-[#e91e62de]">
+             Place order
+           </button>
+         </div>
+       </div> : <p className="flex justify-center items-center text-2xl font-semibold">Empty Cart</p>
+    }
     </motion.div>
   );
 };
