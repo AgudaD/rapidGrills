@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const CartTop = () => {
   return (
     <div className="flex items-center gap-4 rounded-sm p-6 shadow-lg drop-shadow-2xl">
-      <Link to={"/"}>
+      <Link to={"/shop"}>
         <ArrowLeft
             size={32}
             color="#e91e63"
