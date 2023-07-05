@@ -26,16 +26,9 @@ const ShopContextProvider = (props) => {
     });
   }
   
+
   const removeFromCart = (itemId) => {
-    setCartItems((prev) => {
-      const updatedItems = { ...prev };
-      if (typeof updatedItems[itemId] === 'number' && updatedItems[itemId] > 1) {
-        updatedItems[itemId] -= 1;
-      } else {
-        delete updatedItems[itemId];
-      }
-      return updatedItems;
-    });
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
 
   const getTotalCartAmount = () => {
@@ -65,3 +58,27 @@ const ShopContextProvider = (props) => {
 };
 
 export default ShopContextProvider;
+
+// const addToCart = (itemId) => {
+//   setCartItems((prev) => {
+//     const updatedItems = { ...prev };
+//     if (typeof updatedItems[itemId] === 'number') {
+//       updatedItems[itemId] += 1;
+//     } else {
+//       updatedItems[itemId] = 1;
+//     }
+//     return updatedItems;
+//   });
+// }
+
+// const removeFromCart = (itemId) => {
+//   setCartItems((prev) => {
+//     const updatedItems = { ...prev };
+//     if (typeof updatedItems[itemId] === 'number' && updatedItems[itemId] > 1) {
+//       updatedItems[itemId] -= 1;
+//     } else {
+//       delete updatedItems[itemId];
+//     }
+//     return updatedItems;
+//   });
+// };
