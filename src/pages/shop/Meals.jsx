@@ -30,7 +30,6 @@ const Meals = (props) => {
               Add {cartItemAmount > 0 && <>({cartItemAmount})</>}
             </button>
           </div>
-          <div>{/* <Counter meals={meals} /> */}</div>
         </div>
       </div>
     </div>
