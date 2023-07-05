@@ -14,7 +14,7 @@ const Meals = (props) => {
           <div className="flex items-center gap-3">
             <img
               src={image}
-              alt=""
+              alt={name}
               className="h-[3.5rem] max-w-[5rem] md:h-[5rem] md:w-[7rem] lg:h-[4rem] lg:max-w-[5rem]"
             />
             <div>
