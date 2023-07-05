@@ -86,14 +86,6 @@ const Restaurants = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-
-      {/* <div className="mt-4">
-        <div>
-          <p>Subway - Lahore</p>
-          <p>Fast Food,American,Meat,Halal</p>
-          <p>$30 delivery fee</p>
-        </div>
-      </div> */}
     </div>
   );
 };

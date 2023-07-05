@@ -5,7 +5,7 @@ export const ShopContext = createContext(null);
 
 const getDefaultCart = () => {
   let cart = {};
-  for (let i = 0; i < meals.length; i++) {
+  for (let i = 1; i < meals.length; i++) {
     cart[i] = 0;
   }
   return cart;
@@ -15,10 +15,27 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
   const addToCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
-  };
+    setCartItems((prev) => {
+      const updatedItems = { ...prev };
+      if (typeof updatedItems[itemId] === 'number') {
+        updatedItems[itemId] += 1;
+      } else {
+        updatedItems[itemId] = 1;
+      }
+      return updatedItems;
+    });
+  }
+  
   const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    setCartItems((prev) => {
+      const updatedItems = { ...prev };
+      if (typeof updatedItems[itemId] === 'number' && updatedItems[itemId] > 1) {
+        updatedItems[itemId] -= 1;
+      } else {
+        delete updatedItems[itemId];
+      }
+      return updatedItems;
+    });
   };
 
   const getTotalCartAmount = () => {

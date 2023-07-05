@@ -5,7 +5,6 @@ import Home from "./pages/home/Home";
 import Cart from "./pages/cart/Cart";
 import { Routes, Route } from "react-router-dom";
 import Shops from "./pages/shop/Shops";
-import Tests from "./components/Tests";
 import ShopContextProvider from "./context/ShopContext";
 
 const App = () => {
