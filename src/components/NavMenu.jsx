@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
-import { Heart, ShoppingCart, X } from "phosphor-react";
+import { NavLink } from "react-router-dom";
+import { Heart, UserCircle, X } from "phosphor-react";
 import logo from '../assets/logo.svg'
 
 const Navbar = () => {
@@ -22,13 +22,12 @@ const Navbar = () => {
       {/* Burger menu */}
       <div
         className="flex cursor-pointer items-center justify-between gap-3 rounded-xl p-6 shadow-xl drop-shadow-md lg:hidden"
-        onClick={() => setOpen(!open)}
         style={{
           opacity: open && "0",
         }}
       >
         <div className="flex items-center gap-3">
-          <div className="flex w-fit flex-col gap-1">
+          <div className="flex w-fit flex-col gap-1" onClick={() => setOpen(!open)}>
             <div className="w-5 rounded-sm border border-y-[1.25px] border-pink-500 bg-white"></div>
             <div className="w-4 rounded-sm border border-y-[1.25px] border-pink-500 bg-white"></div>
             <div className="w-6 rounded-sm border border-y-[1.25px] border-pink-500 bg-white"></div>
@@ -41,8 +40,9 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div>
-          <Heart size={24} color="#e91e63" />
+        <div className="flex items-center gap-4">
+          <Heart size={28} color="#e91e63" />
+          <UserCircle size={28} color="#e91e63" />
         </div>
       </div>
 
