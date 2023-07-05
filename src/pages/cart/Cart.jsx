@@ -2,8 +2,14 @@ import CartTop from "../../components/CartTop";
 import rider from "../../assets/rider.svg";
 import { Bookmark } from "phosphor-react";
 import { motion } from "framer-motion";
+import { meals } from "../../mockData";
+import { ShopContext } from "../../context/ShopContext";
+import { useContext } from "react";
+import CartItem from "./CartItem";
 
 const Cart = () => {
+  const {cartItems} = useContext(ShopContext)
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -12,7 +18,33 @@ const Cart = () => {
     >
       <CartTop />
       <div className="px-12 py-6">
-        <div className="flex items-center gap-10 p-3 shadow-md drop-shadow-lg">
+        {meals.map((meal) => {
+           if(cartItems[meal.id] !== 0){
+            return <CartItem data={meal} />
+           }
+        })}
+      </div>
+      <hr className="bg-gray-600" />
+      <div className="-mt-3 px-12 py-6 font-semibold">
+        <div className="mb-5 flex items-center justify-between">
+          <p>Total</p>
+          <p>$205.14</p>
+        </div>
+        <button className="w-full rounded-md bg-[#D60665] px-6 py-2 text-white hover:bg-[#e91e62de]">
+          Place order
+        </button>
+      </div>
+    </motion.div>
+  );
+};
+
+export default Cart;
+
+
+
+
+
+{/* <div className="flex items-center gap-10 p-3 shadow-md drop-shadow-lg">
           <img src={rider} alt="" />
           <div>
             <p className="text-sm">Estimated delivery</p>
@@ -57,20 +89,4 @@ const Cart = () => {
           <p className="text-lg font-semibold text-[#D60665]  hover:text-[#e91e62de]">
             Apply a voucher
           </p>
-        </div>
-      </div>
-      <hr className="bg-gray-600" />
-      <div className="-mt-3 px-12 py-6 font-semibold">
-        <div className="mb-5 flex items-center justify-between">
-          <p>Total</p>
-          <p>$205.14</p>
-        </div>
-        <button className="w-full rounded-md bg-[#D60665] px-6 py-2 text-white hover:bg-[#e91e62de]">
-          Place order
-        </button>
-      </div>
-    </motion.div>
-  );
-};
-
-export default Cart;
+        </div> */}

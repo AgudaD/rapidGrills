@@ -1,26 +1,35 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, MinusCircle, PlusCircle } from "phosphor-react";
+import {
+  ArrowLeft,
+  MinusCircle,
+  PlusCircle,
+  ShoppingCart,
+} from "phosphor-react";
 import { meals } from "../../mockData";
 import Meals from "./Meals";
-
 
 const Shops = () => {
   const [count, setCount] = useState(0);
 
   return (
     <div>
-      <div className="flex items-center gap-4 rounded-sm p-6 shadow-lg drop-shadow-2xl">
-        <Link to={"/"}>
-          <ArrowLeft size={32} color="#e91e63" className="" />
-        </Link>
-        <div>
-          <p className="text-lg">Shop</p>
-          <p className="-mt-2 text-sm">Lorem ipsum dolor sit amet.</p>
+      <div className="flex justify-between items-center gap-4 rounded-sm p-6 shadow-lg drop-shadow-2xl">
+        <div className="flex items-center gap-4">
+          <Link to={"/"}>
+            <ArrowLeft size={32} color="#e91e63" className="" />
+          </Link>
+          <div>
+            <p className="text-lg">Shop</p>
+            <p className="-mt-2 text-sm">Lorem ipsum dolor sit amet.</p>
+          </div>
         </div>
+        <Link to={"/cart"}>
+          <ShoppingCart size={24} color="#e91e63" />
+        </Link>
       </div>
 
-      <div className="grid grid-flow-row-dense grid-cols-1 gap-4 px-6 py-4 mt-16 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-16 grid grid-flow-row-dense grid-cols-1 gap-4 px-6 py-4 md:grid-cols-2 lg:grid-cols-3">
         {meals.map((meal) => {
           return (
             <div key={meal.id}>
