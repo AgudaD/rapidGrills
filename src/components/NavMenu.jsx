@@ -74,7 +74,7 @@ const Navbar = () => {
           />
         </div>
         <nav
-          className="font-helvetica absolute left-6 top-8 z-50 flex flex-col text-center text-black opacity-0"
+          className="font-helvetica absolute left-6 top-16 z-50 flex flex-col space-y-5 text-black opacity-0"
           style={{
             opacity: open && "1",
             transform: open && "translate(40px)",
@@ -82,21 +82,21 @@ const Navbar = () => {
         >
           <NavLink
             className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="/"
+            to="/meals"
           >
-            Home
+            Meals
           </NavLink>
           <NavLink
             className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="/about"
+            to="/history"
           >
-            About us
+            Order History
           </NavLink>
           <NavLink
             className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="/press"
+            to="/useraccount"
           >
-            Press
+            User Account
           </NavLink>
         </nav>
       </div>
@@ -104,7 +104,7 @@ const Navbar = () => {
       {/* Web nav */}
       <div className="hidden lg:flex justify-center items-center gap-2 rounded-xl p-6 shadow-xl drop-shadow-md">
         <img src={logo} alt="" />
-        <h1 className="text-3xl tracking-wide">foodpanda</h1>
+        <h1 className="text-3xl text-[#e91e63] tracking-wide">Rapid Grills</h1>
       </div>
     </div>
   );

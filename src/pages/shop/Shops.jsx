@@ -38,11 +38,13 @@ const Shops = () => {
           );
         })}
       </div>
-      <div className="my-16 flex items-center justify-center">
-        <button className="rounded-full border bg-[#e91e63] px-8 py-1.5 text-white hover:bg-[#e91e62bb] md:text-xl">
-          Proceed
-        </button>
-      </div>
+      <Link to={"/cart"}>
+        <div className="my-16 flex items-center justify-center">
+          <button className="rounded-full border bg-[#e91e63] px-8 py-1.5 text-white hover:bg-[#e91e62bb] md:text-xl">
+            Proceed
+          </button>
+        </div>
+      </Link>
     </div>
   );
 };
