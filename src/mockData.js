@@ -32,20 +32,20 @@ export const meals = [
       price: 7.59,
       image: "https://www.menudrive.com/wp-content/uploads/2021/02/Sandwich.png",
     },
-    // {
-    //   id: 6,
-    //   name: "Shawarma",
-    //   price: 10,
-    //   image:
-    //     "https://doner-chi.ca/wp-content/uploads/2022/04/Turkish-Shawarma.png",
-    // },
-    // {
-    //   id: 7,
-    //   name: "Hotdog",
-    //   price: 3.95,
-    //   image:
-    //     "https://assets.website-files.com/603372273fbc1306f1583eab/60364be6e775f2349bb6dbad_cheerleaders-hotdogs-got-the-flava.png",
-    // },
+    {
+      id: 6,
+      name: "Shawarma",
+      price: 10,
+      image:
+        "https://doner-chi.ca/wp-content/uploads/2022/04/Turkish-Shawarma.png",
+    },
+    {
+      id: 7,
+      name: "Hotdog",
+      price: 3.95,
+      image:
+        "https://assets.website-files.com/603372273fbc1306f1583eab/60364be6e775f2349bb6dbad_cheerleaders-hotdogs-got-the-flava.png",
+    },
     // {
     //   id: 8,
     //   name: "Salad",

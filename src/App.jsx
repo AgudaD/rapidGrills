@@ -6,7 +6,7 @@ import Cart from "./pages/cart/Cart";
 import { Routes, Route } from "react-router-dom";
 import Shops from "./pages/shop/Shops";
 import Tests from "./components/Tests";
-import ShopContext from "./context/ShopContext";
+import ShopContextProvider from "./context/ShopContext";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,13 +32,13 @@ const App = () => {
             <Loading />
           </motion.div>
         ) : (
-          <ShopContext>
+          <ShopContextProvider>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/shop" element={<Shops />} />
             </Routes>
-          </ShopContext>
+          </ShopContextProvider>
         )}
       </AnimatePresence>
     </div>

@@ -11,7 +11,7 @@ const getDefaultCart = () => {
   return cart;
 };
 
-const ShopContext = (props) => {
+const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
   const addToCart = (itemId) => {
@@ -31,4 +31,4 @@ const ShopContext = (props) => {
   );
 };
 
-export default ShopContext;
+export default ShopContextProvider;

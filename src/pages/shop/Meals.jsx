@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
-import ShopContext from "../../context/ShopContext";
+import { useContext } from "react";
+import { ShopContext } from "../../context/ShopContext";
 
 const Meals = (props) => {
-  const { addToCart } = useContext(ShopContext);
-  const { id, name, price, image } = props.data;
+
+    const { id, name, price, image } = props.data;
+    const { addToCart, cartItems } = useContext(ShopContext);
+    const cartItemAmount = cartItems[id]
+
   return (
     <div>
       <div>
@@ -24,7 +27,7 @@ const Meals = (props) => {
               className="rounded-full border border-[#e91e63] px-8 py-1.5 hover:bg-[#e91e6248] md:px-6 md:text-sm"
               onClick={() => addToCart(id)}
             >
-              Add
+              Add {cartItemAmount > 0 && <>({cartItemAmount})</>}
             </button>
           </div>
           <div>{/* <Counter meals={meals} /> */}</div>
