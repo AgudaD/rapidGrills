@@ -99,7 +99,7 @@ const Navbar = () => {
       </div>
 
       {/* Web nav */}
-      <div className="hidden lg:flex justify-center items-center gap-2 rounded-xl p-6 shadow-xl drop-shadow-md">
+      <div className="hidden lg:flex items-center rounded-xl p-6 shadow-xl drop-shadow-md">
         <img src={logo} alt="" />
         <h1 className="text-3xl text-[#e91e63] tracking-wide">Rapid Grills</h1>
       </div>

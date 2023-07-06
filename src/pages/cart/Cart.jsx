@@ -5,7 +5,6 @@ import { ShopContext } from "../../context/ShopContext";
 import { useContext } from "react";
 import CartItem from "./CartItem";
 import { ShoppingCartSimple } from "phosphor-react";
-
 const Cart = () => {
   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
@@ -26,10 +25,10 @@ const Cart = () => {
       </div>
 
       {totalAmount > 0 ? (
-        <div>
+        <div className="mt-10">
           <hr className="bg-gray-600" />
           <div className="-mt-3 px-12 py-6 font-semibold">
-            <div className="mb-5 flex items-center justify-between">
+            <div className="mb-5 mt-5 flex items-center justify-between">
               <p>Total</p>
               <p>${totalAmount}</p>
             </div>

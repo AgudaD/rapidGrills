@@ -22,7 +22,6 @@ const Restaurants = () => {
           },
         }}
         scrollbar={{draggable: true}}
-        onslideChange={() => console.log(`slide change`)}
         onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
