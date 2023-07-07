@@ -23,7 +23,7 @@ const Home = () => {
         </div>
 
         <LocateRestaurant />
-        <Restaurants />
+        {/* <Restaurants /> */}
       </div>
     </motion.div>
   );

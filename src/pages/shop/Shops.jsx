@@ -21,7 +21,7 @@ const Shops = () => {
         </Link>
       </div>
 
-      <div className="mt-10 grid grid-flow-row-dense grid-cols-1 gap-4 px-6 py-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid grid-flow-row-dense grid-cols-1 gap-4 px-6 py-4 md:grid-cols-2 ">
         {meals.map((meal) => (
           <Meals data={meal} />
         ))}

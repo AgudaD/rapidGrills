@@ -107,7 +107,7 @@ export const meals = [
       id: 17,
       name: "Spaghetti & Meatballs",
       price: 25,
-      image: "https://d121ck0xk6rnj0.cloudfront.net/eyJidWNrZXQiOiJyaXZpYW5hLWJ1Y2tldCIsImtleSI6ImltYWdlcy9DcmVhbWV0dGUvQ3JlYW1ldHRlLWhlYWRlci1wbGF0ZS5wbmciLCJlZGl0cyI6eyJwbmciOnsicXVhbGl0eSI6MTAwLCJwcm9ncmVzc2l2ZSI6dHJ1ZX0sInJlc2l6ZSI6eyJ3aWR0aCI6MTIwMCwiaGVpZ2h0Ijo4NjksImZpdCI6ImNvdmVyIn0sInNoYXJwZW4iOnRydWV9fQ==",
+      image: "https://pngimg.com/d/spaghetti_PNG23.png",
     },
     {
       id: 18,
