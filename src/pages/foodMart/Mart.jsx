@@ -12,7 +12,7 @@ const Mart = () => {
             <ArrowLeft size={32} color="#e91e63" className="" />
           </Link>
           <div>
-            <p className="text-lg">Shop</p>
+            <p className="text-lg">Mart</p>
             <p className="-mt-2 text-sm">Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
@@ -28,7 +28,7 @@ const Mart = () => {
       </div>
       <Link to={"/cart"}>
         <div className="my-16 flex items-center justify-center">
-          <button className="rounded-lg border bg-[#e91e63] px-8 py-1.5 text-white hover:bg-[#e91e62bb] md:text-xl">
+          <button className="rounded-lg border bg-[#e91e63] w-full px-8 py-1.5 text-white hover:bg-[#e91e62bb] md:text-xl">
             Proceed
           </button>
         </div>

@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Shops from "./pages/shop/Shops";
 import ShopContextProvider from "./context/ShopContext";
 import Mart from "./pages/foodMart/Mart";
+import Checkout from "./pages/checkout/Checkout";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +20,6 @@ const App = () => {
 
   return (
     <div className="font-grotesk">
-      {/* <Tests meals={meals} /> */}
       <AnimatePresence>
         {isLoading ? (
           <motion.div
@@ -38,6 +38,7 @@ const App = () => {
               <Route path="/cart" element={<Cart />} />
               <Route path="/shop" element={<Shops />} />
               <Route path="/mart" element={<Mart />} />
+              <Route path="/checkout" element={<Checkout />} />
             </Routes>
           </ShopContextProvider>
         )}

@@ -5,6 +5,8 @@ import { ShopContext } from "../../context/ShopContext";
 import { useContext } from "react";
 import CartItem from "./CartItem";
 import { ShoppingCartSimple } from "phosphor-react";
+import { Link } from "react-router-dom";
+
 const Cart = () => {
   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
@@ -32,9 +34,11 @@ const Cart = () => {
               <p>Total</p>
               <p>${totalAmount}</p>
             </div>
-            <button className="w-full rounded-md bg-[#D60665] px-6 py-2 text-white hover:bg-[#e91e62de]">
-              Place order
-            </button>
+            <Link to={"/checkout"}>
+              <button className="w-full rounded-md bg-[#D60665] px-6 py-2 text-white hover:bg-[#e91e62de]">
+                Place order
+              </button>
+            </Link>
           </div>
         </div>
       ) : (
