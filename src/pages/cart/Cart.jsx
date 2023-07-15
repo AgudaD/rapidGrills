@@ -27,7 +27,7 @@ const Cart = () => {
       </div>
 
       {totalAmount > 0 ? (
-        <div className="mt-10">
+        <div className="mt-10 ">
           <hr className="bg-gray-600" />
           <div className="-mt-3 px-12 py-6 font-semibold">
             <div className="mb-5 mt-5 flex items-center justify-between">
@@ -36,7 +36,7 @@ const Cart = () => {
             </div>
             <Link to={"/checkout"}>
               <button className="w-full rounded-md bg-[#D60665] px-6 py-2 text-white hover:bg-[#e91e62de]">
-                Place order
+                Proceed to Checkout
               </button>
             </Link>
           </div>

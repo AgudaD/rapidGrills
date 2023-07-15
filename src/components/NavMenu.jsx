@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Heart, UserCircle, X } from "phosphor-react";
+import { Heart, ShoppingCart, UserCircle, X } from "phosphor-react";
 import logo from '../assets/logo.svg'
 
 const Navbar = () => {
@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <Heart size={28} color="#e91e63" />
+          <ShoppingCart size={28} color="#e91e63" />
           <UserCircle size={28} color="#e91e63" />
         </div>
       </div>
@@ -99,9 +99,16 @@ const Navbar = () => {
       </div>
 
       {/* Web nav */}
-      <div className="hidden lg:flex items-center rounded-xl p-6 shadow-xl drop-shadow-md">
-        <img src={logo} alt="" />
-        <h1 className="text-3xl text-[#e91e63] tracking-wide">Rapid Grills</h1>
+      <div className="hidden lg:flex justify-between items-center rounded-xl p-6 shadow-xl drop-shadow-md">
+        <div className="flex items-center">
+          <img src={logo} alt="" />
+          <h1 className="text-3xl text-[#e91e63] tracking-wide">Rapid Grills</h1>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <ShoppingCart size={32} color="#e91e63" />
+          <UserCircle size={32} color="#e91e63" />
+        </div>
       </div>
     </div>
   );

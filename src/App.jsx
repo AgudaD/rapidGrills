@@ -8,6 +8,7 @@ import Shops from "./pages/shop/Shops";
 import ShopContextProvider from "./context/ShopContext";
 import Mart from "./pages/foodMart/Mart";
 import Checkout from "./pages/checkout/Checkout";
+import Pickup from "./pages/Pickup/Pickup";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,6 +40,7 @@ const App = () => {
               <Route path="/shop" element={<Shops />} />
               <Route path="/mart" element={<Mart />} />
               <Route path="/checkout" element={<Checkout />} />
+              <Route path="/pickup" element={<Pickup />} />
             </Routes>
           </ShopContextProvider>
         )}

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, ShoppingCart } from "phosphor-react";
 import MartItems from "./MartItems";
-import { martProducts } from './../../martData';
+import { martProducts } from "./../../martData";
 
 const Mart = () => {
   return (
     <div>
-      <div className="flex items-center justify-between gap-4 rounded-sm p-6 shadow-lg drop-shadow-2xl">
+      <div className="fixed top-0 left-0 w-full z-50 bg-white flex items-center justify-between gap-4 rounded-sm p-6 shadow-lg drop-shadow-2xl">
         <div className="flex items-center gap-4">
           <Link to={"/"}>
             <ArrowLeft size={32} color="#e91e63" className="" />
@@ -21,18 +21,19 @@ const Mart = () => {
         </Link>
       </div>
 
-      <div className="mt-10 grid grid-flow-row-dense grid-cols-1 gap-4 px-6 py-4 md:grid-cols-2">
+      <div className="mt-24 grid grid-flow-row-dense grid-cols-1 gap-4 px-6 py-4 md:grid-cols-2">
         {martProducts.map((martproduct) => (
           <MartItems data={martproduct} />
         ))}
       </div>
-      <Link to={"/cart"}>
-        <div className="my-16 flex items-center justify-center">
-          <button className="rounded-lg border bg-[#e91e63] w-full px-8 py-1.5 text-white hover:bg-[#e91e62bb] md:text-xl">
-            Proceed
+
+      <div className="px-6 my-6">
+        <Link to={"/checkout"}>
+          <button className="w-full rounded-md bg-[#D60665] px-6 py-2 text-white hover:bg-[#e91e62de]">
+            Procced to Payment
           </button>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 };

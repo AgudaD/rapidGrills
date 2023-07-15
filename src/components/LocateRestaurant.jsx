@@ -11,21 +11,13 @@ const LocateRestaurant = () => {
       <div className="relative">
         <input
           type="search"
-          placeholder="Search restaurant"
+          placeholder="Search Food"
           className="w-full rounded-lg px-12 py-1.5 shadow-xl outline-none drop-shadow-md"
         />
         <img src={search} alt="" className="absolute left-1.5 top-1.5 w-6" />
       </div>
 
-      <div className="mt-6 grid grid-flow-row-dense grid-cols-1 gap-x-2 gap-y-3 md:grid-cols-2">
-        <div className="flex items-center justify-between rounded-md bg-pink-600 px-3 py-6 text-white md:col-span-2">
-          <div className="mt-12">
-            <p className="text-base font-semibold md:text-2xl">Food Delivery</p>
-            <p className="text-sm md:text-lg">order food you love</p>
-          </div>
-          <img src={atikah} alt="" className="w-32 md:w-48" />
-        </div>
-
+      <div className="mt-10 grid grid-flow-row-dense grid-cols-1 gap-x-2 gap-y-3 md:grid-cols-2">
         <Link to={"/mart"} className="flex flex-col justify-around rounded-md bg-[#FCD077] p-3 md:row-span-2">
           <div>
             <img src={martImages} alt="" className="w-full" />
@@ -36,28 +28,30 @@ const LocateRestaurant = () => {
           </div>
         </Link>
 
-        <div className="relative rounded-md bg-pink-300 p-4">
-          <div className="mt-14 md:mt-24">
-            <p className="text-base font-semibold md:text-2xl">Pick-Up</p>
-            <p className="text-sm  md:text-lg">Everyday up to 25% off</p>
+        <Link to={"/pickup"} className="relative rounded-md bg-pink-300 p-4">
+          <div className="relative rounded-md bg-pink-300 p-4">
+            <div className="mt-14 md:mt-24 lg:mt-56">
+              <p className="text-base font-semibold md:text-2xl">Pick-Up</p>
+              <p className="text-sm  md:text-lg">Everyday up to 25% off</p>
+            </div>
+            <img
+              src={foodbag}
+              alt=""
+              className="absolute right-0 top-0 w-[5rem] md:w-[8rem] lg:w-[10rem]"
+            />
           </div>
-          <img
-            src={foodbag}
-            alt=""
-            className="absolute right-0 top-0 w-[5rem] md:w-[8rem]"
-          />
-        </div>
+        </Link>
 
         <Link to={"/shop"} className="relative rounded-md bg-blue-300 p-3">
           <div>
-            <div className="mt-4 md:mt-16">
+            <div className="mt-4 md:mt-16 lg:mt-56">
               <p className="text-base font-semibold md:text-2xl">Shops</p>
               <p className="text-sm  md:text-lg">Grocery and more</p>
             </div>
             <img
               src={groceries}
               alt=""
-              className="absolute right-0 top-0  w-[3rem] md:w-[6rem]"
+              className="absolute right-0 top-0 w-[3rem] md:w-[6rem] lg:w-[10rem]"
             />
           </div>
         </Link>
