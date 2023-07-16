@@ -12,7 +12,7 @@ const CartItem = (props) => {
         <img
           src={image}
           alt=""
-          className="h-[3.5rem] max-w-[5rem] md:h-[5rem] md:w-[7rem] lg:h-[4rem] lg:max-w-[5rem]"
+          className="h-[3.5rem] max-w-[5rem] md:h-[5rem] md:w-[10rem] lg:h-[10rem] lg:max-w-[5rem] object-contain"
         />
         <div>
           <p className="md:text-xl">{name}</p>

@@ -40,7 +40,7 @@ const ShopContextProvider = (props) => {
         totalAmount += cartItems[item] * itemInfo.price;
       }
     }
-    return totalAmount;
+    return totalAmount.toFixed(2);
   };
 
   const contextValue = {

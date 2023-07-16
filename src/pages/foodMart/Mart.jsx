@@ -28,9 +28,9 @@ const Mart = () => {
       </div>
 
       <div className="px-6 my-6">
-        <Link to={"/checkout"}>
+        <Link to={"/cart"}>
           <button className="w-full rounded-md bg-[#D60665] px-6 py-2 text-white hover:bg-[#e91e62de]">
-            Procced to Payment
+            Proceed
           </button>
         </Link>
       </div>
