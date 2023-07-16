@@ -7,7 +7,7 @@ const CartItem = (props) => {
   const { cartItems, addToCart, removeFromCart } = useContext(ShopContext);
 
   return (
-    <div className="flex items-center justify-between gap-3 rounded-md p-3 shadow-lg drop-shadow-md">
+    <div className="flex items-center justify-between gap-3 rounded-md p-3 border shadow-lg drop-shadow-md">
       <div className="flex items-center gap-3">
         <img
           src={image}

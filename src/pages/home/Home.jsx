@@ -18,8 +18,8 @@ const Home = () => {
 
       <div className="my-12 px-6">
         <div>
-          <p className="text-xl font-semibold">Good Evening, Mehrez</p>
-          <p>What's for dinner? There are 50 restaurants around you.</p>
+          <p className="text-2xl font-semibold">Good day, David</p>
+          <p className="text-lg">What's for dinner? There are 50 restaurants around you.</p>
         </div>
 
         <LocateRestaurant />

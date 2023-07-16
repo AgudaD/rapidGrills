@@ -18,7 +18,7 @@ const Cart = () => {
       transition={{ duration: 0.75 }}
     >
       <CartTop />
-      <div className="px-12 py-6">
+      <div className="px-12 py-6 space-y-4">
         {meals.map((meal) => {
           if (cartItems[meal.id] !== 0) {
             return <CartItem data={meal} />;

@@ -9,6 +9,8 @@ import ShopContextProvider from "./context/ShopContext";
 import Mart from "./pages/foodMart/Mart";
 import Checkout from "./pages/checkout/Checkout";
 import Pickup from "./pages/Pickup/Pickup";
+import Login from "./pages/authentication/Login";
+import SignUp from "./pages/authentication/SignUp";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,6 +43,8 @@ const App = () => {
               <Route path="/mart" element={<Mart />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/pickup" element={<Pickup />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/registration" element={<SignUp />} />
             </Routes>
           </ShopContextProvider>
         )}

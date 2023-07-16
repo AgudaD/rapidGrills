@@ -6,7 +6,7 @@ import { meals } from "../../mockData";
 const Shops = () => {
   return (
     <div>
-      <div className="fixed top-0 left-0 w-full z-50 bg-white flex items-center justify-between gap-4 rounded-sm p-6 shadow-lg drop-shadow-2xl">
+      <div className="fixed top-0 left-0 w-full z-50 bg-white flex items-center justify-between gap-4 rounded-sm p-6 border shadow-lg drop-shadow-2xl">
         <div className="flex items-center gap-4">
           <Link to={"/"}>
             <ArrowLeft size={32} color="#e91e63" className="" />

@@ -102,7 +102,7 @@ const Navbar = () => {
       <div className="hidden lg:flex justify-between items-center rounded-xl p-6 shadow-xl drop-shadow-md">
         <div className="flex items-center">
           <img src={logo} alt="" />
-          <h1 className="text-3xl text-[#e91e63] tracking-wide">Rapid Grills</h1>
+          <h1 className="text-3xl text-[#e91e63] font-bold tracking-wide">Rapid Grills</h1>
         </div>
 
         <div className="flex items-center gap-4">
