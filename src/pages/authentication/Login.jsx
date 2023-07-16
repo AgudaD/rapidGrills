@@ -23,9 +23,9 @@ const Login = () => {
 
         <div>
             <h2>Sign In</h2>
-            <section>
-                <ArrowRight size={32} color="#D60665" />
-            </section>
+            <div className="flex rounded-full w-12 h-12 justify-center items-center bg-gradient-to-tr from-white via-pink-500 to-rose-200">
+                <ArrowRight size={32} color="white" />
+            </div>
         </div>
       </div>
     </div>
