@@ -1,4 +1,4 @@
-import { ArrowLeft, Eye } from "phosphor-react";
+import { ArrowLeft, ArrowRight, Eye } from "phosphor-react";
 import React from "react";
 
 const Login = () => {
@@ -19,6 +19,13 @@ const Login = () => {
             <Eye size={20} color="gray" className="absolute bottom-1 right-0" />
           </div>
           <p className="mt-1 text-end text-sm">Forgot Password?</p>
+        </div>
+
+        <div>
+            <h2>Sign In</h2>
+            <section>
+                <ArrowRight size={32} color="#D60665" />
+            </section>
         </div>
       </div>
     </div>
