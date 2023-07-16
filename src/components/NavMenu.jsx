@@ -107,7 +107,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           <ShoppingCart size={32} color="#e91e63" />
-          <UserCircle size={32} color="#e91e63" />
+          <UserCircle size={30} color="#e91e63" />
         </div>
       </div>
     </div>
