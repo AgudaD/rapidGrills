@@ -21,11 +21,11 @@ const Login = () => {
           <p className="mt-1 text-end text-sm">Forgot Password?</p>
         </div>
 
-        <div>
-            <h2>Sign In</h2>
-            <div className="flex rounded-full w-12 h-12 justify-center items-center bg-gradient-to-tr from-white via-pink-500 to-rose-200">
-                <ArrowRight size={32} color="white" />
-            </div>
+        <div className="flex items-center justify-between mt-10">
+          <h2>Sign In</h2>
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-tr from-white via-pink-500 to-rose-200">
+            <ArrowRight size={32} color="white" />
+          </div>
         </div>
       </div>
     </div>
