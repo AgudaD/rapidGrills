@@ -6,8 +6,8 @@ const SearchBar = () => {
       <div className="relative">
         <input
           type="search"
-          placeholder="Search Food"
-          className="w-full rounded-lg px-12 py-1.5 shadow-xl outline-none drop-shadow-md"
+          placeholder="search food"
+          className="w-full rounded-lg px-12 py-1.5 shadow-xl outline-none drop-shadow-md placeholder:tracking-wider"
         />
         <img src={search} alt="" className="absolute left-1.5 top-1.5 w-6" />
       </div>

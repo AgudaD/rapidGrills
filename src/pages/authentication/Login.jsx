@@ -1,13 +1,11 @@
-import { ArrowLeft, ArrowRight, Eye } from "phosphor-react";
-import React from "react";
+import { ArrowRight, Eye } from "phosphor-react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <div className="px-6 py-4">
-      <ArrowLeft size={32} color="#D60665" />
-
       <div className="mt-20">
-        <p className="text-xl font-semibold text-pink-600">Welcome Back</p>
+        <p className="text-2xl font-semibold text-pink-600">Welcome Back</p>
         <div className="mt-16 text-gray-500">
           <div className="mt-5">
             <label>Email</label>
@@ -29,9 +27,11 @@ const Login = () => {
 
         <div className="mt-10 flex items-center justify-between">
           <h2 className="text-2xl font-bold text-pink-600">Sign In</h2>
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-pink-300 bg-gradient-to-tr from-rose-400 via-pink-500 to-rose-200 shadow-md drop-shadow-lg">
+          <Link to={"/"}>
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-pink-300 bg-gradient-to-tr from-rose-400 via-pink-500 to-rose-200 shadow-md drop-shadow-lg">
             <ArrowRight size={32} color="white" />
-          </div>
+            </div>
+          </Link>
         </div>
 
         <p className="mt-3 text-center text-gray-500">Or continue with</p>
@@ -56,7 +56,9 @@ const Login = () => {
 
         <p className="mt-12 text-gray-500">
           Don't have an account?{" "}
-          <span className="text-[#D60665] underline">Register</span>
+          <Link to={"/registration"}>
+            <span className="text-[#D60665] underline">Register</span>
+          </Link>
         </p>
       </div>
     </div>
