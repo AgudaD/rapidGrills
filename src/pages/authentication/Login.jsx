@@ -36,7 +36,7 @@ const Login = () => {
             <img src="https://logos-world.net/wp-content/uploads/2020/04/Apple-Logo.png" alt="" className="bg-white shadow-md drop-shadow-md rounded-full p-2 w-16 h-16 object-contain" />
         </div>
 
-        <p className="text-gray-500 mt-10">Don't have an account? <span className="text-[#D60665] underline">Register</span></p>
+        <p className="text-gray-500 mt-12">Don't have an account? <span className="text-[#D60665] underline">Register</span></p>
       </div>
     </div>
   );
