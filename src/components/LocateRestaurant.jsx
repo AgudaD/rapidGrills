@@ -1,5 +1,3 @@
-import search from "../assets/Search.gif";
-import atikah from "../assets/atikah.svg";
 import foodbag from "../assets/foodbag.svg";
 import groceries from "../assets/groceries.svg";
 import martImages from "../assets/martImages.svg";
@@ -8,14 +6,7 @@ import { Link } from "react-router-dom";
 const LocateRestaurant = () => {
   return (
     <div className="mt-8">
-      <div className="relative">
-        <input
-          type="search"
-          placeholder="Search Food"
-          className="w-full rounded-lg px-12 py-1.5 shadow-xl outline-none drop-shadow-md"
-        />
-        <img src={search} alt="" className="absolute left-1.5 top-1.5 w-6" />
-      </div>
+      
 
       <div className="mt-10 grid grid-flow-row-dense grid-cols-1 gap-x-2 gap-y-3 md:grid-cols-2">
         <Link to={"/mart"} className="flex flex-col justify-around rounded-md bg-[#FCD077] p-3 md:row-span-2">

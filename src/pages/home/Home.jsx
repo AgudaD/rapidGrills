@@ -1,9 +1,9 @@
 import React from "react";
-// import Navbar from "../components/Navbar";
 import Navbar from "../../components/NavMenu";
 import LocateRestaurant from "../../components/LocateRestaurant";
 import Restaurants from "../../components/Restaurants";
 import { motion } from "framer-motion";
+import SearchBar from "../../components/SearchBar";
 
 const Home = () => {
   return (
@@ -22,6 +22,7 @@ const Home = () => {
           <p className="text-lg">What's for dinner? There are 50 restaurants around you.</p>
         </div>
 
+        <SearchBar />
         <LocateRestaurant />
         {/* <Restaurants /> */}
       </div>
