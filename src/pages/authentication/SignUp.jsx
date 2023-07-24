@@ -58,10 +58,24 @@ const SignUp = () => {
         </div>
 
         <div className="mt-5">
-          <div className="h-6 w-12 rounded-full bg-[#D60665]">
-            <div className="h-6 w-6 rounded-full bg-white" style={{
-              float: toggle && 'right'
+          {/* <div className="h-5 w-12 py-1 rounded-full bg-[#D60665] flex items-center">
+            <div className="h-5 w-5 rounded-full bg-white transition-all duration-500 ease-in-out" style={{
+              background: toggle && 'green'
             }} onClick={() => setToggle(!toggle)}></div>
+          </div> */}
+          <div
+            className="flex h-6 w-12 items-center rounded-full bg-gray-300 transition-all duration-500 ease-in-out"
+            style={{
+              background: toggle && "#D60665",
+            }}
+            onClick={() => setToggle(!toggle)}
+          >
+            <div
+              className="ml-0.5 h-4 w-4 rounded-full bg-slate-50 transition-all duration-500 ease-in-out"
+              style={{
+                marginLeft: toggle && "30px",
+              }}
+            ></div>
           </div>
           I accept the <span className="text-[#D60665]">Terms of Service</span>{" "}
           as well as <span className="text-[#D60665]">Privacy Policy.</span>
