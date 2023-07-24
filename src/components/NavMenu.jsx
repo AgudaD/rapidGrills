@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Heart, ShoppingCart, UserCircle, X } from "phosphor-react";
+import { ShoppingCart, UserCircle, X } from "phosphor-react";
 import logo from '../assets/logo.svg'
 
 const Navbar = () => {
